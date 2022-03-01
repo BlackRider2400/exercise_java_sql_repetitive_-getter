@@ -43,7 +43,7 @@ public class MainController {
                 break;
             case "kolumna2":
                 for(Row row : dbRowList){
-                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn2).collect(Collectors.toList()), row.getColumn1()) > 1){
+                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn2).collect(Collectors.toList()), row.getColumn2()) > 1){
                         list.add(row);
                         log.info("Added: " + row);
                     }
@@ -51,7 +51,7 @@ public class MainController {
                 break;
             case "kolumna3":
                 for(Row row : dbRowList){
-                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn3).collect(Collectors.toList()), row.getColumn1()) > 1){
+                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn3).collect(Collectors.toList()), row.getColumn3()) > 1){
                         list.add(row);
                         log.info("Added: " + row);
                     }
@@ -59,7 +59,7 @@ public class MainController {
                 break;
             case "kolumna4":
                 for(Row row : dbRowList){
-                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn4).collect(Collectors.toList()), row.getColumn1()) > 1){
+                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn4).collect(Collectors.toList()), row.getColumn4()) > 1){
                         list.add(row);
                         log.info("Added: " + row);
                     }
@@ -79,7 +79,7 @@ public class MainController {
         switch (column){
             case "kolumna1":
                 for(Row row : dbRowList){
-                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn1).collect(Collectors.toList()), row.getColumn1()) == 1){
+                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn1).collect(Collectors.toList()), row.getColumn1()) <= 1){
                         list.add(row);
                         log.info("Added: " + row);
                     }
@@ -87,7 +87,7 @@ public class MainController {
                 break;
             case "kolumna2":
                 for(Row row : dbRowList){
-                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn2).collect(Collectors.toList()), row.getColumn1()) == 1){
+                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn2).collect(Collectors.toList()), row.getColumn2()) <= 1){
                         list.add(row);
                         log.info("Added: " + row);
                     }
@@ -95,7 +95,7 @@ public class MainController {
                 break;
             case "kolumna3":
                 for(Row row : dbRowList){
-                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn3).collect(Collectors.toList()), row.getColumn1()) == 1){
+                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn3).collect(Collectors.toList()), row.getColumn3()) <= 1){
                         list.add(row);
                         log.info("Added: " + row);
                     }
@@ -103,7 +103,7 @@ public class MainController {
                 break;
             case "kolumna4":
                 for(Row row : dbRowList){
-                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn4).collect(Collectors.toList()), row.getColumn1()) == 1){
+                    if(Collections.frequency(dbRowList.stream().map(Row::getColumn4).collect(Collectors.toList()), row.getColumn4()) <= 1){
                         list.add(row);
                         log.info("Added: " + row);
                     }
